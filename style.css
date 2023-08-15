@@ -1,0 +1,148 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root{
+    --text: 2.5rem;
+    --head: calc(1rem + 5vw);
+}
+
+
+.body{
+    font-family: 'Bree Serif', serif;
+}
+
+
+.hero-section{
+    min-height: 100vh;
+    background: 
+    /* linear-gradient(rgb(110, 22, 22), transparent), */
+    url('img/bgimg.1.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-size: 100% 100%;
+    position: relative;
+    z-index: 1;
+    animation: slide 1s ease-in-out;
+}
+
+
+@keyframes slide {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0%);
+    }
+}
+
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    padding: 0rem 5rem;
+    color: rgb(0, 0, 0);
+    animation: movedown 850ms ease-in 1s forwards;
+    transform: translateY(-100%);
+}
+
+
+@keyframes movedown {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0%);
+    }
+}
+
+
+.navbar ul{
+    list-style: none;
+}
+
+
+.navbar ul li{
+    display: inline-block;
+    margin-left: 3rem;
+    font-size: var(--text);
+}
+
+
+.navbar ul li a{
+    text-decoration: none;
+    color: rgb(0, 0, 0) ;
+    /* border-bottom: 2px solid black; */
+}
+
+
+.navbar ul li a:hover{
+    border-bottom: 4px solid black;
+}
+
+
+.hero-text{
+    color: black;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.hero-text ::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgb(194, 189, 177);
+    top: 0%;
+    left: 0%;
+    z-index: -1;
+    opacity: 0.1;
+}
+
+
+.hero-text a{
+    color: black;
+    background-color: rgba(4, 187, 178, 0.493);
+    font-weight: 900;
+    padding: 0.4rem 1.3rem;
+    margin: 0.8rem auto;
+    display: block;
+    transition: opacity 20ms;
+    font-size: 2rem;
+    border-radius: 100% 100% 100% 100% / 100% 100% 100% 100% ;
+}
+
+
+.hero-text a:hover{
+    opacity: 0.6;
+}
+
+
+.navbar h2{
+    font-size: 2rem;
+    font-family: 'Source Serif 4', serif;
+    background-color: rgba(94, 240, 232, 0.493);
+    border-radius: 100% 100% 100% 100% / 100% 100% 100% 100% ;
+    padding: 0.4rem 1.3rem;
+    border-image: linear-gradient(45deg,red,blue) 10;
+}
+
+
+.hero-text p{
+    font-family: 'Source Serif 4', serif;
+    font-size: 6rem;
+}
+
+
+.hero-text h2{
+    font-size: 7rem;
+}
